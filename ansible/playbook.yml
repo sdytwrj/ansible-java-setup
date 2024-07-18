@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Update apt-get
+      apt:
+        update_cache: yes
+
+    - name: Install default JDK
+      apt:
+        name: default-jdk
+        state: present
+

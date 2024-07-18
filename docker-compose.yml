@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ansible:
+    image: williamyeh/ansible:ubuntu18.04
+    volumes:
+      - ./ansible/playbook.yml:/playbook.yml
+    depends_on:
+      - ubuntu
+    command: >
+      sh -c "
+      sleep 10;
+      ansible-playbook -i 'ubuntu,' -c local /playbook.yml
+      "
+  ubuntu:
+    image: ubuntu:18.04
+    container_name: ubuntu
+    tty: true
+
