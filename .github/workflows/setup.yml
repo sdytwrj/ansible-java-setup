@@ -10,7 +10,7 @@ jobs:
         run: |
           docker-compose up
           sleep 120s
-          docker-compose stop
+          docker-compose down
       
     
 
