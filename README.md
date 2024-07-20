@@ -14,14 +14,14 @@ This is the Docker Compose configuration file. It sets up an Ansible container t
 ## Usage
 To use this workflow:
 
-1.Ensure you have Docker and Docker Compose installed on your runner.
-2.Trigger the workflow manually through the GitHub Actions interface.
+1. Ensure you have Docker and Docker Compose installed on your runner.
+2. Trigger the workflow manually through the GitHub Actions interface.
 
 The workflow will:
 
-1.Check out the repository.
-2.Set up Docker Compose.
-3.Run the Ansible playbook inside a Docker container.
+1. Check out the repository.
+2. Set up Docker Compose.
+3. Run the Ansible playbook inside a Docker container.
 
 ## Notes
 - The setup.yml file is triggered manually using workflow_dispatch.
