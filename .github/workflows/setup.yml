@@ -9,7 +9,7 @@ jobs:
       - name: setup Docker Compose
         run: |
           docker-compose up
-          sleep 120 seconds
+          sleep 120s
           docker-compose stop
       
     
