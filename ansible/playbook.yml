@@ -11,3 +11,13 @@
         name: default-jdk
         state: present
 
+    - name: Verify Java installation
+      command: java -version
+      register: java_version_output
+      ignore_errors: yes
+
+    - name: Print Java version
+      debug:
+        msg: "{{ java_version_output.stdout }}"
+      when: java_version_output is defined and java_version_output.stdout != ""
+
